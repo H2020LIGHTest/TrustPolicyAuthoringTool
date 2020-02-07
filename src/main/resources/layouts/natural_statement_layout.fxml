@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<TitledPane fx:id="mTitledPane" minHeight="250.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eu.lightest.tpat.mvc.view.NaturalStatementView">
+   <content>
+      <VBox>
+         <children>
+          <AnchorPane fx:id="mContentPane" VBox.vgrow="ALWAYS">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </AnchorPane>
+            <Separator VBox.vgrow="NEVER" />
+            <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" spacing="4.0" VBox.vgrow="NEVER">
+               <children>
+                  <ImageView fx:id="mErrorImg" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER" />
+                  <Label fx:id="mErrorLabel" text="Error" textFill="RED" wrapText="true" HBox.hgrow="NEVER">
+                  </Label>
+                  <Pane HBox.hgrow="ALWAYS" />
+                  <Separator orientation="VERTICAL" HBox.hgrow="NEVER" />
+                  <ImageView fx:id="mScalingImg" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="-0.0" left="-0.0" right="-0.0" top="-0.0" />
+         </padding>
+      </VBox>
+   </content>
+</TitledPane>

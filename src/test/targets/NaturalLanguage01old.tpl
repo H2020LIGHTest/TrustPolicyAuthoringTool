@@ -1,0 +1,13 @@
+accept(Form):-
+    extract(Form,format,actionhouse2018)
+    ,extract(Form,bid,Bid),Bid<=100
+    ,extract(Form,certificate,Certificate)
+    ,extract(Certificate,pubKey,PK)
+    ,extract(Certificate,issuer,Issuer)
+    ,extract(Issuer,trustScheme,TrustMemClaim)
+    ,trustscheme(TrustMemClaim,eIDAS_qualified)
+    ,trustlist(TrustMemClaim,Issuer,TrustListEntry)
+    ,extract(TrustListEntry,pubKey,PKIss)
+    ,verify_signature(Certificate,PKIss)
+    ,verify_signature(Form,PK)
+    .

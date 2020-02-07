@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.66" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eu.lightest.tpat.mvc.view.GraphicalLanguageView">
+   <items>
+      <VBox>
+         <children>
+            <ToolBar>
+              <items>
+                  <HBox spacing="8.0">
+                     <children>
+                        <Button fx:id="mUndo" mnemonicParsing="false" onAction="#undo" />
+                        <Button fx:id="mRedo" mnemonicParsing="false" onAction="#redo" />
+                        <Pane HBox.hgrow="ALWAYS" />
+                        <Label fx:id="mSaveLabel" text="saving..." visible="false">
+                           <graphic>
+                              <Group fx:id="mSaveGroup" />
+                           </graphic>
+                        </Label>
+                     </children>
+                  </HBox>
+              </items>
+            </ToolBar>
+            <SplitPane fx:id="mTwoColumns" dividerPositions="0.5" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <items>
+                  <VBox>
+                     <children>
+                        <VBox alignment="CENTER" VBox.vgrow="NEVER">
+                           <children>
+                              <Label text="Part of a certain Trust Scheme" wrapText="true" VBox.vgrow="ALWAYS">
+                                 <padding>
+                                    <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onPartOf" style="-fx-background-color: #009164; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Add Trust Scheme" textFill="WHITE" />
+                           </children>
+                        </VBox>
+                        <AnchorPane fx:id="mPartOfPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+                  <VBox>
+                     <children>
+                        <VBox alignment="CENTER" VBox.vgrow="NEVER">
+                           <children>
+                              <Label text="Equivalent to a certain Trust Scheme" wrapText="true" VBox.vgrow="ALWAYS">
+                                 <padding>
+                                    <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onEquiv" style="-fx-background-color: #005286; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Add Trust Scheme" textFill="WHITE" />
+                           </children>
+                        </VBox>
+                        <AnchorPane fx:id="mEquivalentPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </items>
+            </SplitPane>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="100.0">
+         <children>
+            <Pane fx:id="mDetailPane" VBox.vgrow="ALWAYS" />
+         </children></VBox>
+   </items>
+</SplitPane>

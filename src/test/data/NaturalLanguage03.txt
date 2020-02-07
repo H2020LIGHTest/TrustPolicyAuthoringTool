@@ -1,0 +1,1 @@
+if input is format of example and certificate is equivalent to GermanCompanies then accept it;
