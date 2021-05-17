@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>eu.lightest</groupId>
-    <artifactId>TPAT</artifactId>
-    <version>1.2</version>
+    <artifactId>tpat</artifactId>
+    <version>1.2.1</version>
 
 <!--    for CI-->
     <repositories>
@@ -27,7 +27,7 @@
         <dependency>
             <groupId>eu.lightest</groupId>
             <artifactId>horn</artifactId>
-            <version>1.9</version>
+            <version>1.9.1</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
